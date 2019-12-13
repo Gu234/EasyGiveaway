@@ -4,6 +4,10 @@ import { Link } from "react-scroll";
 export default () => 
 <div>
     <ul>
+        <li>Zaloguj</li>
+        <li>Załóż konto</li>
+    </ul>
+    <ul>
         <li><Link smooth={true} to = 'HomeThreeColumns'>Start</Link></li>
         <li><Link smooth={true} to = 'HomeEasySteps'>O co chodzi?</Link></li>
         <li><Link smooth={true} to = 'HomeAboutUs'>O nas</Link></li>

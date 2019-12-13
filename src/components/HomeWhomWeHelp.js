@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import SectionTitle from './SectionTitle'
 
 export default class WhomWeHelp extends Component{
    state ={

@@ -1,5 +1,4 @@
 import React from 'react';
-import HomeHeader from './HomeHeader';
 import HomeThreeColumns from './HomeThreeColumns';
 import HomeEasySteps from './HomeEasySteps';
 import HomeAboutUs from './HomeAboutUs';
@@ -9,7 +8,6 @@ import HomeFooter from './HomeFooter';
 
 export default () => 
 <div>
-    <HomeHeader/>
     <HomeThreeColumns/>
     <HomeEasySteps/>
     <HomeAboutUs/>
