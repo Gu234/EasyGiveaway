@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from "react-scroll";
 
 export default () => 
-<div>
-    <ul>
+<div className='headerBox'>
+    <ul className='headerBox-upperButtons'>
         <li>Zaloguj</li>
         <li>Załóż konto</li>
     </ul>
-    <ul>
+    <ul className='headerBox-navbar'>
         <li><Link smooth={true} to = 'HomeThreeColumns'>Start</Link></li>
         <li><Link smooth={true} to = 'HomeEasySteps'>O co chodzi?</Link></li>
         <li><Link smooth={true} to = 'HomeAboutUs'>O nas</Link></li>

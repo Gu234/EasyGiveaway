@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-export default ({title}) =>
+export default (props) =>
 <>
-    <h2>{title}</h2>
-    <img src="../assets/Decoration.svg" alt=""/>
+    <div>{props.children}</div>
+    <div className='sectionTitleImg'></div>
 </>
 
 

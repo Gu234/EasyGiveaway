@@ -1,13 +1,15 @@
 import React from 'react';
-import HomeThreeColumns from './HomeThreeColumns';
-import HomeEasySteps from './HomeEasySteps';
-import HomeAboutUs from './HomeAboutUs';
-import HomeWhomWeHelp from './HomeWhomWeHelp';
-import HomeContactForm from './HomeContactForm';
-import HomeFooter from './HomeFooter';
+import HomeTop from './Home/HomeTop';
+import HomeThreeColumns from './Home/HomeThreeColumns';
+import HomeEasySteps from './Home/HomeEasySteps';
+import HomeAboutUs from './Home/HomeAboutUs';
+import HomeWhomWeHelp from './Home/HomeWhomWeHelp';
+import HomeContactForm from './Home/HomeContactForm';
+import HomeFooter from './Home/HomeFooter';
 
 export default () => 
 <div>
+    <HomeTop/>
     <HomeThreeColumns/>
     <HomeEasySteps/>
     <HomeAboutUs/>
