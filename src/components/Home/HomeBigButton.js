@@ -2,4 +2,8 @@ import React from 'react';
 
 
 export default (props) =>
-<div className='homeBigButton'>{props.children}</div>
+    <div className='homeBigButton'>
+        <div>
+            {props.children}
+        </div>
+    </div>

@@ -4,11 +4,13 @@
 
 body{
     font-family: $font-base;
+    color: $color5;
 }
+
 
 .homeTop {
     display: flex;
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
     .homeTop-heroBanner{
         width: 50%;
@@ -21,14 +23,51 @@ body{
     .homeTop-items{
         width: 50%;
         height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .homeTop-buttons{
+            display: flex;
+            justify-content: center;
+        }
     }
 
 }
 
-.sectionTitleImg{
-    width: 253px;
-    height: 33px;
-    background-image: url("../assets/Decoration.svg");
+.sectionTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 38px;
+    
+    .sectionTitleImg{
+        margin-top: 25px;
+        margin-bottom: 65px;
+        width: 253px;
+        height: 33px;
+        background-image: url("../assets/Decoration.svg");
+        background-repeat: no-repeat;
+    }
+
+}
+
+.homeBigButton{
+    font-size: 36px;
+    font-weight: lighter;
+    width: 310px;
+    height: 120px;
+    border: .75px solid $color5;
+    margin: 40px;
+    text-align: center;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    div{
+        padding: 0 10px;
+    }
 }
 
 .headerBox{
@@ -43,4 +82,106 @@ body{
         display: inline-block;
 
     }
+}
+
+.homeThreeColumns{
+    background-color: $color3;
+    height: 384px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 55px;
+    .column{
+        width: 335px;
+        height: 252px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        div:nth-child(1){
+            color: $color2;
+            font-size: 90px;
+            font-weight: lighter;
+        }
+        div:nth-child(2){
+            font-size:18px;
+        }
+        div:nth-child(3){
+            font-size: 16px;
+            font-weight: lighter;
+            font-family: $font-alt;
+        }
+    }
+}
+
+.homeEasySteps{
+    background-color: $color1;
+    height: 325px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .column{
+        width: 130px;
+        height: 190px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        div:nth-child(1){
+            width: 83px;
+            height: 83px;
+        }
+        div:nth-child(2){
+            font-size: 18px;
+        }
+        div:nth-child(3){
+            height: 1px;
+            width: 100px;
+            background-color: $color5;
+        }
+        div:nth-child(4){
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+}
+
+.homeSectionButton{
+    display: flex;
+    justify-content: center;
+}
+
+.homeAboutUs{
+    height: 935px;
+    display: flex;
+    justify-content: center;
+    .aboutUs-firstHalf{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        background-color: $color1;
+        .aboutUs-paragraph{
+            padding: 0 150px; 
+            font-size: 30px;
+            text-align: center;
+            margin: 40px 150px;
+        }
+        .homeAboutus-signature{
+            align-self: flex-end;
+            width: 210px;
+            height: 150px;
+            background-image: url(../assets/Signature.svg);
+            background-position: center;
+            background-size: auto;
+        }
+    }
+
+    .aboutUs-secondHalf{
+        height: 935px;
+        width: 50%;
+        background-image: url(../assets/People.jpg);
+    }
+    
 }
