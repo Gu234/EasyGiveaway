@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 
 export default class WhomWeHelp extends Component{
    state ={
-      activeView = 1 ,
-
+      activeView = 0 ,
+      activePage = 0,
    }
 
-   changeView = (viewNumber)=>{
-this.setState({activeView:viewNumber})
+   changeView = (viewNumber,viewPage)=>{
+this.setState({activeView:viewNumber,activePage:viewPage})
    }
 
    render(){
@@ -24,7 +24,14 @@ this.setState({activeView:viewNumber})
             <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, dolores est quam inventore velit, recusandae quis quod aliquid similique ullam eligendi expedita voluptatem nam sit exercitationem. A eligendi magni facere.
             </p>
-            
+
+            <Wpis activeView={this.state.activeView} activePage={this.state.activePage}/>
+            <Wpis/>
+            <Wpis/>
+            <ListaPrzyciskówPodstron>
+               {JSON.map((item,index)=><li onClick={()=>this.changeView(this.activeView,index)}>{index+1}</li> )}
+            </ListaPrzyciskówPodstron>
+            }
 
          </>
       )

@@ -8,7 +8,7 @@ import './App.css';
 import {
   HashRouter,
   Route,
-  Switch,
+  Switch
 } from 'react-router-dom';
 
 function App() {
