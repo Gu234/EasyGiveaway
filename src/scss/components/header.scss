@@ -1,0 +1,27 @@
+.headerBox{
+    height: 95px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    .headerBox-upperButtons{
+        display: flex;
+        justify-content: flex-end;
+        li{
+            margin: 20px;
+            padding: 10px 9px;
+            font-size: 14px;
+        }
+    }
+    .headerBox-navbar{
+        display: flex;
+        justify-content: flex-end;
+        .navbar{
+            font-size: 18px;
+            padding: 20px 9px;
+            margin: 36px 20px;
+        }
+    }
+
+}

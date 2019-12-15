@@ -1,0 +1,19 @@
+.fundation{
+    font-family: $font-alt;
+    font-weight: lighter;
+    width: 70%;
+    height: 81px;
+    display: flex;
+    justify-content: space-between;
+    .fundation-nfo-name{
+        font-size: 26px;
+    }
+    .fundation-nfo-mission{
+        font-size: 18px;
+        
+    }
+    // .fundation-things{
+
+    // }
+
+}
