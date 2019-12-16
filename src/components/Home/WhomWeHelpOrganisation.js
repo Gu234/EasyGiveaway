@@ -1,10 +1,10 @@
 import React from 'react';
-import organisations from '../../data/organizations';
+import json from '../../data/organizations';
 
-JSON.parse(organisations)
+
 
 export default props => {
-    const fundation = JSON.parse(organisations).organisations[props.activeView].fundations[props.index + props.activePage * 3];
+    const fundation = json.organizations[props.activeView].foundations[props.index];
     return <div className='fundation'>
         <div className='fundation-nfo'>
             <div className='fundation-nfo-name'>

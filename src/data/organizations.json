@@ -1,46 +1,46 @@
-export default {
+{
   "organizations": [
     {
       "navName": "Fundacjom",
       "description": "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
       "foundations": [
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o Zdrowie1”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o Zdrowie2”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o Zdrowie3”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o 2Zdrowie4”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o 3Zdrowie”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o 4Zdrowie”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o 5Zdrowie”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o 6Zdrowie”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SectionTitle from '../SectionTitle';
 import WhomWeHelpOrganisation from './WhomWeHelpOrganisation';
-import organisations from '../../data/organizations';
+import json from '../../data/organizations';
 
 
 
@@ -16,6 +16,13 @@ export default class WhomWeHelp extends Component {
 
 
    render() {
+
+      const length = json.organizations[this.state.activeView].foundations.length;
+      const numberOfSubpages = Math.floor(length / 3);
+      let subpagesArr = []
+      if (numberOfSubpages > 1)
+         subpagesArr = Array.from({ length: numberOfSubpages }, (v, k) => k + 1);
+
       return (
          <>
             <SectionTitle>Komu pomagamy?</SectionTitle>
@@ -26,16 +33,18 @@ export default class WhomWeHelp extends Component {
                <div><button onClick={() => this.changeView(2, 0)} >Lokalnym zbiórkom</button></div>
             </div>
             <p>
-               {JSON.parse(organisations).organisations[this.activeView].description}
+               {json.organizations[this.state.activeView].description}
             </p>
-            <WhomWeHelpOrganisation index={0} activeView={this.state.activeView} activePage={this.state.activePage} />
-            <WhomWeHelpOrganisation index={1} activeView={this.state.activeView} activePage={this.state.activePage} />
-            <WhomWeHelpOrganisation index={2} activeView={this.state.activeView} activePage={this.state.activePage} />
+            {json.organizations[this.state.activeView].foundations.map((fundation, i) => {
+               if (i >= this.state.activePage * 3 && i < this.state.activePage * 3 + 3)
+                  return <WhomWeHelpOrganisation activeView={this.state.activeView} index={i} />
+               return null
+            })}
             <div className='subpages'>
-               {organisations.map((item, index) =>
-                  <li onClick={() => this.changeView(this.activeView, index)}>{index + 1}</li>)}
+               {subpagesArr.map((item, index) =>
+                  <div key={index} onClick={() => this.changeView(this.state.activeView, index)}>{item}</div >)}
             </div>
-            }
+
 
          </>
       )
