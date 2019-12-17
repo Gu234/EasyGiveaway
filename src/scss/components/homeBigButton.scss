@@ -1,4 +1,4 @@
-.homeBigButton{
+.homeBigButton-wrapper{
     font-size: 36px;
     font-weight: lighter;
     width: 310px;
@@ -10,7 +10,9 @@
     align-self: center;
     justify-content: center;
     align-items: center;
-    div{
+    .homeBigButton{
         padding: 0 10px;
+        text-decoration: none;
+        color: $color5;
     }
 }

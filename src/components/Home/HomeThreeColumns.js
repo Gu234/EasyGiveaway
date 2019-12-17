@@ -2,7 +2,7 @@ import React from 'react';
 
 
 export default () => 
-<div  className='homeThreeColumns'>
+<div  name='HomeThreeColumns' className='homeThreeColumns'>
    <div className="column">
       <div>10</div>
       <div>ODDANYCH WORÓW</div>

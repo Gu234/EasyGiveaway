@@ -1,5 +1,9 @@
 .headerBox{
-    height: 95px;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    top: 0;
+    height: 110px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -9,6 +13,13 @@
         display: flex;
         justify-content: flex-end;
         li{
+            .headerBox-upperButton{
+                color: $color5;
+                text-decoration: none;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
             margin: 20px;
             padding: 10px 9px;
             font-size: 14px;
@@ -17,10 +28,18 @@
     .headerBox-navbar{
         display: flex;
         justify-content: flex-end;
-        .navbar{
-            font-size: 18px;
-            padding: 20px 9px;
-            margin: 36px 20px;
+        li{
+            .navbar{
+                font-size: 18px;
+                padding: 20px 9px;
+                margin: 36px 20px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .active{
+                border: .75px solid $color5;
+            }
         }
     }
 
