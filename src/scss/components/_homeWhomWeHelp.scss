@@ -16,9 +16,18 @@
             justify-self: center;
             font-size: 24px;
             padding: 13px;
+            border:.75px solid transparent;
+            text-align: center;
+            &:hover{
+                cursor: pointer;
+                background-color: $color3;
+            } 
         }
+        .HomeWhomWeHelp-topButton-active{
+            border:.75px solid $color5 ;
+        }
+        
     }
-
     .HomeWhomWeHelp-paragraph{
         width: 60%;
         text-align: center;
@@ -35,8 +44,10 @@
             border: .75px solid transparent; 
             padding: 15px;
             &:hover{
+                background-color: $color3;
                 cursor: pointer;
             }
+
             
         }
         .active-subpage{

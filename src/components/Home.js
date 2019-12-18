@@ -5,7 +5,6 @@ import HomeEasySteps from './Home/HomeEasySteps';
 import HomeAboutUs from './Home/HomeAboutUs';
 import HomeWhomWeHelp from './Home/HomeWhomWeHelp';
 import HomeContactForm from './Home/HomeContactForm';
-import HomeFooter from './Home/HomeFooter';
 import SectionTitle from './SectionTitle';
 import HomeBigButton from './Home/HomeBigButton';
 
@@ -21,5 +20,4 @@ export default () =>
     <HomeAboutUs/>
     <HomeWhomWeHelp/>
     <HomeContactForm/>
-    <HomeFooter/>
 </div>

@@ -19,19 +19,16 @@ export default class WhomWeHelp extends Component {
 
       const length = json.organizations[this.state.activeView].foundations.length;
       const numberOfSubpages = Math.floor(length / 3);
-      let subpagesArr = []
-      if (numberOfSubpages > 1)
-         subpagesArr = Array.from({ length: numberOfSubpages }, (v, k) => k + 1);
-
-      // const topButtonBorderStyle = 
+      const subpagesArr = Array.from({ length: numberOfSubpages }, (v, k) => k + 1);
+      const isSubpageSingle = subpagesArr.length < 2;
       return (
          <div name='HomeWhomWeHelp' className='HomeWhomWeHelp'>
             <SectionTitle>Komu pomagamy?</SectionTitle>
 
             <div className='HomeWhomWeHelp-topButtons'>
-               <div style={{border: this.state.activeView===0 ? '.75px solid #3C3C3C':'.75px solid transparent'}} className='HomeWhomWeHelp-topButton' onClick={() => this.changeView(0, 0)}>Fundacjom</div>
-               <div style={{border: this.state.activeView===1 ? '.75px solid #3C3C3C':'.75px solid transparent'}} className='HomeWhomWeHelp-topButton' onClick={() => this.changeView(1, 0)}>Organizacjom <br />pozarządowym</div>
-               <div style={{border: this.state.activeView===2 ? '.75px solid #3C3C3C':'.75px solid transparent'}} className='HomeWhomWeHelp-topButton' onClick={() => this.changeView(2, 0)} >Lokalnym  <br />zbiórkom</div>
+               <div className={this.state.activeView === 0 ? 'HomeWhomWeHelp-topButton-active HomeWhomWeHelp-topButton' : 'HomeWhomWeHelp-topButton'} onClick={() => this.changeView(0, 0)}>Fundacjom</div>
+               <div className={this.state.activeView === 1 ? 'HomeWhomWeHelp-topButton-active HomeWhomWeHelp-topButton' : 'HomeWhomWeHelp-topButton'} onClick={() => this.changeView(1, 0)}>Organizacjom <br />pozarządowym</div>
+               <div className={this.state.activeView === 2 ? 'HomeWhomWeHelp-topButton-active HomeWhomWeHelp-topButton' : 'HomeWhomWeHelp-topButton'} onClick={() => this.changeView(2, 0)} >Lokalnym  <br />zbiórkom</div>
             </div >
             <p className='HomeWhomWeHelp-paragraph'>
                {json.organizations[this.state.activeView].description}
@@ -44,10 +41,11 @@ export default class WhomWeHelp extends Component {
                })
             }
             <div className='HomeWhomWeHelp-subpages'>
-               {subpagesArr.map((item, index) =>{
-                  if(this.state.activePage===index)
-                     return <div className='HomeWhomWeHelp-subpage active-subpage' key={index} onClick={() => this.changeView(this.state.activeView, index)}>{item}</div >
-                 return <div className='HomeWhomWeHelp-subpage' key={index} onClick={() => this.changeView(this.state.activeView, index)}>{item}</div >})}
+               {subpagesArr.map((item, index) => {
+                  if(isSubpageSingle)
+                     return <div className={'HomeWhomWeHelp-subpage hidden'} key={index} onClick={() => this.changeView(this.state.activeView, index)}>{item}</div >
+                  return <div className={this.state.activePage === index ? 'HomeWhomWeHelp-subpage active-subpage' : 'HomeWhomWeHelp-subpage'} key={index} onClick={() => this.changeView(this.state.activeView, index)}>{item}</div >
+               })}
             </div>
 
 

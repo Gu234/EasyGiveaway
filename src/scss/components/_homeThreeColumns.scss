@@ -1,10 +1,12 @@
 .homeThreeColumns{
-    background-color: $color3;
     height: 384px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 55px;
+    margin-bottom: 70px;
+    background-image: url(../../assets/3_Columns_Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     .column{
         width: 335px;
         height: 252px;

@@ -2,7 +2,7 @@ import React from 'react';
 
 
 export default () => 
-<div name='HomeEasySteps' className='homeEasySteps' >
+<div name='HomeEasySteps'  className='homeEasySteps' >
    <div className="column">
       <div className='img1'></div>
       <div>Wybierz rzeczy</div>

@@ -11,6 +11,7 @@
 @import './components/whomWeHelpOrganisation.scss';
 @import './components/homeWhomWeHelp.scss';
 @import './components//homeContactForm.scss';
+@import './components/homeFooter';
 
 body{
     font-family: $font-base;
@@ -20,4 +21,8 @@ body{
 .homeSectionButton{
     display: flex;
     justify-content: center;
+}
+
+.hidden{
+    visibility: hidden;
 }

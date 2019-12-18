@@ -2,6 +2,11 @@ import React from 'react';
 
 
 export default () => 
-<div>
-   <h1>Nawigacja: Footer</h1>
+<div className='footer'>
+   <div></div>
+   <div>Copyright by Coders Lab</div>
+   <div>
+      <div></div>
+      <div></div>
+   </div>
 </div>
