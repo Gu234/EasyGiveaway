@@ -5,22 +5,42 @@
       "description": "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
       "foundations": [
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o Zdrowie1”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o Zdrowie2”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o Zdrowie3”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Fundacja  “Dbam o 2Zdrowie4”",
+          "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+        },
+        {
+          "name": "Fundacja  “Dbam o 3Zdrowie”",
+          "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+        },
+        {
+          "name": "Fundacja  “Dbam o 4Zdrowie”",
+          "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+        },
+        {
+          "name": "Fundacja  “Dbam o 5Zdrowie”",
+          "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+        },
+        {
+          "name": "Fundacja  “Dbam o 6Zdrowie”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
@@ -33,30 +53,56 @@
     },
     {
       "navName": "Organizacjom pozarządowym",
-      "description": "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
+      "description": "W naszej bazie znajdziesz listę zweryfikowanych Organizacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
       "foundations": [
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Organizacja  “Lorem 1”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Organizacja  “Lorem 2”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Organizacja  “Lorem 3”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Organizacja  “Lorem 4”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         },
         {
-          "name": "Fundacja  “Dbam o Zdrowie”",
+          "name": "Organizacja  “Lorem 5”",
+          "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+        },
+        {
+          "name": "Organizacja  “Lorem 6”",
+          "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+        }
+      ]
+    },
+    {
+      "navName": "Lokalnym zbiórkom",
+      "description": "W naszej bazie znajdziesz listę zweryfikowanych Lokalnych zbiórek. Możesz sprawdzić czym się zajmują, komu pomagają, co zbierają i czego potrzebują.",
+      "foundations": [
+        {
+          "name": "Zbiórka  “Dbam o Zdrowie”",
+          "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+        },
+        {
+          "name": "Zbiórka  “Dbam o Zdrowie”",
+          "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+        },
+        {
+          "name": "Zbiórka  “Dbam o Zdrowie”",
           "mission": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
           "things": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
         }

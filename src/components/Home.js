@@ -1,19 +1,23 @@
 import React from 'react';
-import HomeHeader from './HomeHeader';
-import HomeThreeColumns from './HomeThreeColumns';
-import HomeEasySteps from './HomeEasySteps';
-import HomeAboutUs from './HomeAboutUs';
-import HomeWhomWeHelp from './HomeWhomWeHelp';
-import HomeContactForm from './HomeContactForm';
-import HomeFooter from './HomeFooter';
+import HomeTop from './Home/HomeTop';
+import HomeThreeColumns from './Home/HomeThreeColumns';
+import HomeEasySteps from './Home/HomeEasySteps';
+import HomeAboutUs from './Home/HomeAboutUs';
+import HomeWhomWeHelp from './Home/HomeWhomWeHelp';
+import HomeContactForm from './Home/HomeContactForm';
+import SectionTitle from './SectionTitle';
+import HomeBigButton from './Home/HomeBigButton';
 
 export default () => 
 <div>
-    <HomeHeader/>
+    <HomeTop/>
     <HomeThreeColumns/>
+    <SectionTitle>Wystarczą 4 proste kroki</SectionTitle>
     <HomeEasySteps/>
+    <div className='homeSectionButton'>
+        <HomeBigButton>ODDAJ RZECZY</HomeBigButton>
+    </div>
     <HomeAboutUs/>
     <HomeWhomWeHelp/>
     <HomeContactForm/>
-    <HomeFooter/>
 </div>

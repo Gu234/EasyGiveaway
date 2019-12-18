@@ -1,0 +1,29 @@
+.offsetTop{
+    height: 110px;
+    width: 100%;
+}
+
+.homeTop {
+    display: flex;
+    height: 100vh;
+    .homeTop-heroBanner{
+        width: 50%;
+        height: 100%;
+        background-image: url(../../assets/Home-Hero-Image.jpg);
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .homeTop-items{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .homeTop-buttons{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+}

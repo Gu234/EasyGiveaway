@@ -1,0 +1,49 @@
+.headerBox{
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    top: 0;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    .headerBox-upperButtons{
+        display: flex;
+        justify-content: flex-end;
+        li{
+            padding: 10px;
+            margin: 20px;
+            font-size: 14px;
+            &:hover{
+                background-color: $color3;
+                
+                cursor: pointer;
+            }
+            .headerBox-upperButton{
+                text-decoration: none;
+                color: $color5;
+            }
+        }
+        li:last-child{
+            border: .75px solid $color3;
+        }
+    }
+    .headerBox-navbar{
+        display: flex;
+        justify-content: flex-end;
+        .navbar{
+            margin: 0 10px;
+            padding: 9px;
+            font-size: 18px;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $color3;
+                }
+            }
+            .active{
+                border: .75px solid $color5;
+            }
+        }
+    }

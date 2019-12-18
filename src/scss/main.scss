@@ -1,7 +1,28 @@
 @import 'reset-css/sass/_reset.scss';
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i|Open+Sans:300,400,600&display=swap');
 @import './settings/colors','./settings/fonts';
+@import './components/homeTop.scss';
+@import './components/sectionTitle.scss';
+@import './components/homeBigButton.scss';
+@import './components/homeThreeColumns.scss';
+@import './components/homeEasySteps.scss';
+@import './components/homeAboutUs.scss';
+@import './components/header.scss';
+@import './components/whomWeHelpOrganisation.scss';
+@import './components/homeWhomWeHelp.scss';
+@import './components//homeContactForm.scss';
+@import './components/homeFooter';
 
 body{
     font-family: $font-base;
+    color: $color5;
+}
+
+.homeSectionButton{
+    display: flex;
+    justify-content: center;
+}
+
+.hidden{
+    visibility: hidden;
 }
