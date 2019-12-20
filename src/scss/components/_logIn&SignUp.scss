@@ -7,6 +7,13 @@
     width: 500px;
     height: 80vh;
     font-size: 16px;
+    div>div>div:nth-child(3){
+        color: transparent;
+        user-select: none;
+        border-top: 1px solid $color5;
+        padding: 10px 0;
+        font-size: 12px;
+    }
     .LogIn-background{
         // width: 80%;
         background-color: $color1;
@@ -14,11 +21,10 @@
     }
     input{
         border: none;
-        border-bottom: .75px solid $color5;
         background-color: transparent;
         font-family: $font-base;
         font-size: 18px;
-        margin-bottom: 30px ;
+        // margin-bottom: 30px ;
     }
     .LogIn-bottomRow{
         margin-top: 40px;
@@ -28,9 +34,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        div{
+            padding: 14px;
+
+        }    
+        div:hover{
+            background-color: $color3;
+            cursor: pointer;
+        }
         div:last-child{
             border: .75px solid $color5;
-            padding: 14px;
         }
     }
 }

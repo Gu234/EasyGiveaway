@@ -12,6 +12,8 @@ export default () =>
             <div>
                <div>Email</div>
                <input type="text" />
+               <div className={this.state.isEmailOk ? '':'invalidInput'}>Podany email jest nieprawidłowy!</div>
+               
             </div>
             <div>
                <div>Hasło</div>
