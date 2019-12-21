@@ -43,6 +43,9 @@ export default class Login extends Component {
       return true
    }
 
+   goTo = () => window.location.href = "/#/rejstracja"; 
+
+
    render() {
       return <>
          <div name='offset' className='offsetTop'></div>
@@ -62,7 +65,7 @@ export default class Login extends Component {
                </div>
             </div>
             <div className='LogIn-bottomRow'>
-               <div>Załóż konto</div>
+               <div onClick={this.goTo}>Załóż konto</div>
                <div onClick={this.handleLogIn} type="submit">Zaloguj się</div>
             </div>
          </div>

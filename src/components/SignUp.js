@@ -47,6 +47,8 @@ export default class SignUp extends Component {
       return true
    }
 
+   goTo = () => window.location.href = "/#/logowanie"; 
+
    render() {
       return <>
          <div name='offset' className='offsetTop'></div>
@@ -71,7 +73,7 @@ export default class SignUp extends Component {
                </div>
             </div>
             <div className='LogIn-bottomRow'>
-               <div>Zaloguj się</div>
+               <div onClick={this.goTo} >Zaloguj się</div>
                <div onClick={this.handleSignUp} type="submit">Załóż konto</div>
             </div>
          </div>

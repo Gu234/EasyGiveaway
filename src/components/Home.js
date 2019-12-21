@@ -15,7 +15,7 @@ export default () =>
     <SectionTitle>Wystarczą 4 proste kroki</SectionTitle>
     <HomeEasySteps/>
     <div className='homeSectionButton'>
-        <HomeBigButton>ODDAJ RZECZY</HomeBigButton>
+        <HomeBigButton>ODDAJ <br/> RZECZY</HomeBigButton>
     </div>
     <HomeAboutUs/>
     <HomeWhomWeHelp/>

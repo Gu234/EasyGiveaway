@@ -31,6 +31,12 @@
         }
     }
     .headerBox-navbar{
+
+        a{
+            text-decoration: none;
+            color: $color5;
+        }
+
         display: flex;
         justify-content: flex-end;
         .navbar{
