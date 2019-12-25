@@ -9,14 +9,14 @@
     align-self: center;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    &:hover{
+        background-color: $color3;
+    }
+    border: .75px solid $color5;
     .homeBigButton{
-        border: .75px solid $color5;
-        display: block;
-        padding: 20px;
-        text-decoration: none;
+        // display: block;
+        // padding: 20px;
         color: $color5;
-                    &:hover{
-                        background-color: $color3;
-                    }
     }
 }

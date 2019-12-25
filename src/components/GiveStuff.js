@@ -1,7 +1,11 @@
+import GiveStuffTop from './GiveStuff/GiveStuffTop';
+import GiveStuffForm from './GiveStuff/GiveStuffForm';
 import React from 'react';
-
+import HomeContactForm from './Home/HomeContactForm';
 
 export default () => 
 <div>
-   <h1>Strona: Oddaj itemzy plox!</h1>
+   <GiveStuffTop/>
+   <GiveStuffForm/>
+   <HomeContactForm/>
 </div>

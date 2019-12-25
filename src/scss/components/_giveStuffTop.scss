@@ -1,0 +1,54 @@
+.giveStuffTop{
+    display: flex;
+    height: 90vh;
+    .giveStuffTop-heroBanner{
+        width: 50%;
+        background-image: url(../../assets/Form-Hero-Image.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+
+    }
+    .giveStuffTop-items{
+        .giveStuffTop-items-steps{
+            font-size: 40px;
+            font-weight: lighter;
+            margin-bottom: 60px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .columns{
+            display: flex;
+            .col{
+                margin: 10px;
+                font-weight: lighter;
+
+                :first-child{
+                    font-size: 32px;
+                    margin-bottom: 40px;
+
+                }
+                :last-child{
+                    font-size: 22px;
+                }
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                height: 190px;
+                width: 190px;
+                position: relative;
+                &::before{
+                    transform: rotate(45deg);
+                    display: block;
+                    position: absolute;
+                    content: '';
+                    height: 190px;
+                    width: 190px;
+                    border: .7px solid $color5;
+                }
+            }
+        }
+    }
+}

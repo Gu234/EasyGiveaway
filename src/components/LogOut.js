@@ -4,7 +4,6 @@ import SectionTitle from './SectionTitle';
 
 export default () =>
    <>
-      <div name='offset' className='offsetTop'></div>
 
       <div className='LogIn'>
          <SectionTitle>Wylogowanie nastąpiło <br/>pomyślnie!</SectionTitle>

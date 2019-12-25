@@ -6,7 +6,6 @@ import HomeAboutUs from './Home/HomeAboutUs';
 import HomeWhomWeHelp from './Home/HomeWhomWeHelp';
 import HomeContactForm from './Home/HomeContactForm';
 import SectionTitle from './SectionTitle';
-import HomeBigButton from './Home/HomeBigButton';
 
 export default () => 
 <div>
@@ -14,9 +13,6 @@ export default () =>
     <HomeThreeColumns/>
     <SectionTitle>Wystarczą 4 proste kroki</SectionTitle>
     <HomeEasySteps/>
-    <div className='homeSectionButton'>
-        <HomeBigButton>ODDAJ <br/> RZECZY</HomeBigButton>
-    </div>
     <HomeAboutUs/>
     <HomeWhomWeHelp/>
     <HomeContactForm/>
