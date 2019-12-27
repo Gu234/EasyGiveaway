@@ -1,0 +1,60 @@
+.warningBox{
+    height: 180px;
+    background-color: $color3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 150px;
+    .warningBox-header{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .warningBox-description{
+        font-size: 22px;
+    }
+}
+
+.GiveStuffForm-banner{
+    height: 883px;
+    background-image: url(../../assets/Background-Form.jpg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-left: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    .GiveStuffForm-step{
+        font-size: 24px;
+        font-weight: lighter;
+    }
+
+    .chooseThings-header{
+        margin-bottom: 40px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .chooseThings-select-item{
+        font-size: 24px;
+        font-weight: lighter;
+    }
+
+   .GiveStuffForm-buttons{
+       display: flex;
+       .GiveStuffForm-button{
+            padding: 23px 63px;
+            border: .7px solid $color5;
+            margin-right: 50px;
+            &:hover{
+                background-color: $color3;
+                cursor: pointer;
+            }
+       }
+   }
+
+   
+   
+}

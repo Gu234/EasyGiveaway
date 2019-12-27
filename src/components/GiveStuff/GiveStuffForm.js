@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import SectionTitle from '../SectionTitle';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import {
    Select,
    InputLabel,
@@ -9,7 +11,7 @@ import {
    FormControlLabel,
    Radio,
    FormLabel,
-   TextField
+   TextField,
 } from '@material-ui/core';
 
 
@@ -48,13 +50,13 @@ export default class GiveStuffForm extends Component {
          case 0:
             return <div>
                <FormControl component="fieldset" >
-                  <FormLabel component="legend">Zaznacz co chcesz oddać</FormLabel>
-                  <RadioGroup aria-label="thingsChoice" name="thingsChoice" value={this.state.thingsChoice} onChange={this.handleChange}>
-                     <FormControlLabel value="ubrania w dobrym stanie" control={<Radio />} label="ubrania, które nadają się do ponownego użycia" />
-                     <FormControlLabel value="ubrania do wyrzucenia" control={<Radio />} label="ubrania, do wyrzucenia" />
-                     <FormControlLabel value="zabawki" control={<Radio />} label="zabawki" />
-                     <FormControlLabel value="książki" control={<Radio />} label="książki" />
-                     <FormControlLabel value="inne" control={<Radio />} label="inne" />
+                  <div className='chooseThings-header' >Zaznacz co chcesz oddać</div>
+                  <RadioGroup className='chooseThings-select' aria-label="chooseThings" name="chooseThings" value={this.state.chooseThings} onChange={this.handleChange}>
+                     <FormControlLabel classes={{ label: 'chooseThings-select-item' }} value="ubrania w dobrym stanie" control={<Radio />} label="ubrania, które nadają się do ponownego użycia" />
+                     <FormControlLabel classes={{ label: 'chooseThings-select-item' }} value="ubrania do wyrzucenia" control={<Radio />} label="ubrania, do wyrzucenia" />
+                     <FormControlLabel classes={{ label: 'chooseThings-select-item' }} value="zabawki" control={<Radio />} label="zabawki" />
+                     <FormControlLabel classes={{ label: 'chooseThings-select-item' }} value="książki" control={<Radio />} label="książki" />
+                     <FormControlLabel classes={{ label: 'chooseThings-select-item' }} value="inne" control={<Radio />} label="inne" />
                   </RadioGroup>
                </FormControl>
 
@@ -91,7 +93,7 @@ export default class GiveStuffForm extends Component {
                   </RadioGroup>
                </FormControl>
                <form noValidate autoComplete="off">
-                  <TextField value={this.state.organization} name='organization'onChange={this.handleChange} label="Konkretna organizacja (opcjonalnie)" />
+                  <TextField value={this.state.organization} name='organization' onChange={this.handleChange} label="Konkretna organizacja (opcjonalnie)" />
                </form>
             </>
          case 3:
@@ -102,12 +104,12 @@ export default class GiveStuffForm extends Component {
                <TextField value={this.state.city} onChange={this.handleChange} name='city' label="Miasto" />
                <TextField value={this.state.zipCode} onChange={this.handleChange} name='zipCode' label="Kod pocztowy" />
                <TextField value={this.state.phoneNr} onChange={this.handleChange} name='phoneNr' label="Numer telefonu" />
-               
+
                <div>Termin odbioru:</div>
                <TextField value={this.state.date} onChange={this.handleChange} name='date' label="Data" />
                <TextField value={this.state.hour} onChange={this.handleChange} name='hour' label="Godzina" />
                <TextField value={this.state.comments} onChange={this.handleChange} name='comments' label="Uwagi dla kuriera" />
-               
+
             </>
          case 4:
             return <>
@@ -115,11 +117,11 @@ export default class GiveStuffForm extends Component {
                <div>Oddajesz:</div>
                <div>
                   <div></div>
-                  <div>4 worki, ubrania w dobrym stanie, dzieciom</div>
+                  <div>{this.state.bagAmount} worki, {this.state.chooseThings}, {this.state.whomToHelp}</div>
                </div>
                <div>
                   <div></div>
-                  <div>dla lokalizacji: Warszawa</div>
+                  <div>dla lokalizacji: {this.state.location}</div>
                </div>
                <div>
                   <div>
@@ -132,10 +134,10 @@ export default class GiveStuffForm extends Component {
                            <div>Numer<br />telefonu</div>
                         </div>
                         <div>
-                           <div>1</div>
-                           <div>2</div>
-                           <div>3</div>
-                           <div>4</div>
+                           <div>{this.state.street}</div>
+                           <div>{this.state.city}</div>
+                           <div>{this.state.zipCode}</div>
+                           <div>{this.state.phoneNr}</div>
                         </div>
                      </div>
                   </div>
@@ -148,9 +150,9 @@ export default class GiveStuffForm extends Component {
                            <div>Uwagi<br />dla kuriera</div>
                         </div>
                         <div>
-                           <div></div>
-                           <div></div>
-                           <div></div>
+                           <div>{this.state.date}</div>
+                           <div>{this.state.hour}</div>
+                           <div>{this.state.comments}</div>
                         </div>
                      </div>
                   </div>
@@ -159,29 +161,47 @@ export default class GiveStuffForm extends Component {
             </>
          case 5:
             return <>
-               <SectionTitle>Dziękujemy za przesłanie formularza<br/>Na maila prześlemy wszelkie informacje o odbiorze</SectionTitle>
+               <SectionTitle>Dziękujemy za przesłanie formularza<br />Na maila prześlemy wszelkie informacje o odbiorze</SectionTitle>
             </>
          default:
             return ''
       }
    }
 
-   render() {
-      return <div>
-         <div>
-            <div>Ważne!</div>
-            <div>{this.warningDescription()}</div>
-         </div>
-         <div className='GiveStuffForm-banner'>
-            <div>Krok {this.state.pageNr + 1}/4</div>
-            <div>{this.pageInput()}</div>
-            <div className='GiveStuffForm-buttons'>
-               <div onClick={this.prevPage}>Wstecz</div>
-               <div onClick={this.nextPage}>Dalej</div>
-            </div>
-         </div>
-      </div>
+   shouldRenderNextButton = () => this.state.pageNr < 4
+   shouldRenderPrevButton = () => ![0, 5].includes(this.state.pageNr)
+   shouldRenderConfirmButton = () => this.state.pageNr === 4
+   shouldRenderStep = () => this.state.pageNr < 4
 
+   render() {
+      const theme = createMuiTheme({
+         palette: {
+            secondary: {
+               main: '#FAD648',
+            },
+         },
+      });
+
+      return (
+         <ThemeProvider theme={theme}>
+            <div>
+               <div className='warningBox'>
+                  <div className='warningBox-header'>Ważne!</div>
+                  <div className='warningBox-description'>{this.warningDescription()}</div>
+               </div>
+               <div className='GiveStuffForm-banner'>
+                  {this.shouldRenderStep() ? <div className='GiveStuffForm-step'>Krok {this.state.pageNr + 1}/4</div> : null}
+                  <div>{this.pageInput()}</div>
+                  <div className='GiveStuffForm-buttons'>
+                     {this.shouldRenderPrevButton() ? <div className='GiveStuffForm-button' onClick={this.prevPage}>Wstecz</div> : null}
+                     {this.shouldRenderNextButton() ? <div className='GiveStuffForm-button' onClick={this.nextPage}>Dalej</div> : null}
+                     {this.shouldRenderConfirmButton() ? <div className='GiveStuffForm-button' onClick={this.nextPage}>Potwierdzam</div> : null}
+                  </div>
+
+               </div>
+            </div>
+         </ThemeProvider>
+      )
 
    }
 }
