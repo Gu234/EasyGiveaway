@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/easy-giveaway/static/css/main.7a068807.chunk.css",
+    "main.js": "/easy-giveaway/static/js/main.7ef3989f.chunk.js",
+    "main.js.map": "/easy-giveaway/static/js/main.7ef3989f.chunk.js.map",
+    "runtime-main.js": "/easy-giveaway/static/js/runtime-main.7537bae8.js",
+    "runtime-main.js.map": "/easy-giveaway/static/js/runtime-main.7537bae8.js.map",
+    "static/js/2.d247f8e1.chunk.js": "/easy-giveaway/static/js/2.d247f8e1.chunk.js",
+    "static/js/2.d247f8e1.chunk.js.map": "/easy-giveaway/static/js/2.d247f8e1.chunk.js.map",
+    "index.html": "/easy-giveaway/index.html",
+    "precache-manifest.c51a55f76746ee5c152b87f7fd47fc35.js": "/easy-giveaway/precache-manifest.c51a55f76746ee5c152b87f7fd47fc35.js",
+    "service-worker.js": "/easy-giveaway/service-worker.js",
+    "static/css/main.7a068807.chunk.css.map": "/easy-giveaway/static/css/main.7a068807.chunk.css.map",
+    "static/js/2.d247f8e1.chunk.js.LICENSE": "/easy-giveaway/static/js/2.d247f8e1.chunk.js.LICENSE",
+    "static/media/main.scss": "/easy-giveaway/static/media/Signature.e54cfcfc.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7537bae8.js",
+    "static/js/2.d247f8e1.chunk.js",
+    "static/css/main.7a068807.chunk.css",
+    "static/js/main.7ef3989f.chunk.js"
+  ]
+}
