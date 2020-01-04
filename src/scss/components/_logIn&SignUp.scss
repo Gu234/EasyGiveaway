@@ -1,0 +1,48 @@
+.SignUp,.LogIn{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 100vh;
+    font-size: 16px;
+    div>div>div:nth-child(3){
+        color: transparent;
+        user-select: none;
+        border-top: 1px solid $color5;
+        padding: 10px 0;
+        font-size: 12px;
+    }
+    .LogIn-background{
+        background-color: $color1;
+        padding: 40px 60px 30px 60px;
+    }
+    input{
+        border: none;
+        background-color: transparent;
+        font-family: $font-base;
+        font-size: 18px;
+    }
+    .LogIn-bottomRow{
+        margin-top: 40px;
+        font-size: 18px;
+        font-weight: lighter;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div{
+            padding: 14px;
+
+        }    
+        div:hover{
+            background-color: $color3;
+            cursor: pointer;
+        }
+        div:last-child{
+            border: .75px solid $color5;
+        }
+    }
+}

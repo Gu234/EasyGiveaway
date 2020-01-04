@@ -12,6 +12,11 @@
 @import './components/homeWhomWeHelp.scss';
 @import './components//homeContactForm.scss';
 @import './components/homeFooter';
+@import './components/logIn&SignUp';
+@import './components/logOut';
+@import './components/giveStuffTop';
+@import './components/giveStuffForm';
+
 
 body{
     font-family: $font-base;
@@ -25,4 +30,12 @@ body{
 
 .hidden{
     visibility: hidden;
+}
+
+.invalidInput{
+    color: red!important;
+    border-top: 1px solid red!important;
+   }
+.succes{
+    visibility: visible!important;
 }
