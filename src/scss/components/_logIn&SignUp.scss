@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     width: 500px;
-    height: 80vh;
+    height: 100vh;
     font-size: 16px;
     div>div>div:nth-child(3){
         color: transparent;
@@ -15,7 +15,6 @@
         font-size: 12px;
     }
     .LogIn-background{
-        // width: 80%;
         background-color: $color1;
         padding: 40px 60px 30px 60px;
     }
@@ -24,7 +23,6 @@
         background-color: transparent;
         font-family: $font-base;
         font-size: 18px;
-        // margin-bottom: 30px ;
     }
     .LogIn-bottomRow{
         margin-top: 40px;

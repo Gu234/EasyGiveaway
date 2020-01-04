@@ -26,6 +26,11 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+
+    .GiveStuffForm-subpage{
+        height: 600px;
+    }
+
     .GiveStuffForm-step{
         font-size: 24px;
         font-weight: lighter;
@@ -55,6 +60,49 @@
        }
    }
 
-   
-   
+   .bagAmount-header{
+       font-size: 36px;
+       font-weight: bold;
+       margin-bottom: 20px;
+    }
+   .bagAmount-label{
+        display: inline-block; 
+        margin: 14px 20px 0 0;
+        font-size: 24px;
+    }
+
+    .subpage2-description{
+        font-size: 24px;
+        font-weight: bolder;
+        margin: 58px 0 20px 0;
+    }
+    .subpage3-inputs{
+        display: flex;
+
+        .subpage3-inputs-column{
+            display: flex;
+            flex-direction: column;
+            &>*{
+                margin: 20px 50px 20px 0;
+            }
+        }
+    }
+    .subpage4-column{
+        &>div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            div{
+                width: 50%;
+                padding: 20px 15px 20px 0;
+            }
+        }
+    }
+
+    .subpage6{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
 }

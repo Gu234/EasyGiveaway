@@ -4,13 +4,10 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import {
    Select,
-   InputLabel,
-   MenuItem,
    RadioGroup,
    FormControl,
    FormControlLabel,
    Radio,
-   FormLabel,
    TextField,
 } from '@material-ui/core';
 
@@ -18,7 +15,7 @@ import {
 export default class GiveStuffForm extends Component {
 
    state = {
-      pageNr: 0
+      pageNr: 0,
    }
 
    warningDescription = () => {
@@ -48,7 +45,7 @@ export default class GiveStuffForm extends Component {
    pageInput = () => {
       switch (this.state.pageNr) {
          case 0:
-            return <div>
+            return <>
                <FormControl component="fieldset" >
                   <div className='chooseThings-header' >Zaznacz co chcesz oddać</div>
                   <RadioGroup className='chooseThings-select' aria-label="chooseThings" name="chooseThings" value={this.state.chooseThings} onChange={this.handleChange}>
@@ -60,61 +57,68 @@ export default class GiveStuffForm extends Component {
                   </RadioGroup>
                </FormControl>
 
-            </div>
+            </>
          case 1:
-            return <div>
-               <InputLabel id="bagAmount">Liczba 60l worków</InputLabel>
-               <Select labelId="bagAmount" id="selectBag" name='bagAmount' value={this.state.bagAmount} onChange={this.handleChange}>
-                  <MenuItem value="1">1</MenuItem>
-                  <MenuItem value="2">2</MenuItem>
-                  <MenuItem value="3">3</MenuItem>
-                  <MenuItem value="4">4</MenuItem>
-                  <MenuItem value="5">5</MenuItem>
-               </Select>
-            </div>
+            return <>
+               <div className='bagAmount-header' >Podaj liczbę 60l worków,<br /> w które spakowałeś/aś rzeczy:</div>
+               <div className='bagAmount-label'>Liczba 60l worków:</div>
+               <FormControl component="fieldset" >
+                  <Select variant='outlined' native name='bagAmount' value={this.state.bagAmount} onChange={this.handleChange}>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                  </Select>
+               </FormControl>
+            </>
          case 2:
             return <>
-               <InputLabel id="location">Lokalizacja</InputLabel>
-               <Select labelId="location" id="selectCity" name='location' value={this.state.location} onChange={this.handleChange}>
-                  <MenuItem value="Poznań">Poznań</MenuItem>
-                  <MenuItem value="Warszawa">Warszawa</MenuItem>
-                  <MenuItem value="Kraków">Kraków</MenuItem>
-                  <MenuItem value="Wrocław">Wrocław</MenuItem>
-                  <MenuItem value="Katowice">Katowice</MenuItem>
+               <div className='bagAmount-header'>Lokalizacja</div>
+               <Select variant='outlined' native name='location' value={this.state.location} onChange={this.handleChange}>
+                  <option value="Poznań">Poznań</option>
+                  <option value="Warszawa">Warszawa</option>
+                  <option value="Kraków">Kraków</option>
+                  <option value="Wrocław">Wrocław</option>
+                  <option value="Katowice">Katowice</option>
                </Select>
-               <FormControl component="fieldset" >
-                  <FormLabel component="legend">Komu chcesz pomóc?</FormLabel>
-                  <RadioGroup aria-label="whomToHelp" name="whomToHelp" value={this.state.whomToHelp} onChange={this.handleChange}>
-                     <FormControlLabel value="dzieciom" control={<Radio />} label="dzieciom" />
-                     <FormControlLabel value="samotnym matkom" control={<Radio />} label="samotnym matkom" />
-                     <FormControlLabel value="bezdomnym" control={<Radio />} label="bezdomnym" />
-                     <FormControlLabel value="niepełnosprawnym" control={<Radio />} label="niepełnosprawnym" />
-                     <FormControlLabel value="osobom starszym" control={<Radio />} label="osobom starszym" />
-                  </RadioGroup>
-               </FormControl>
+               <div className='subpage2-description'>Komu chcesz pomóc?</div>
+               <RadioGroup aria-label="whomToHelp" name="whomToHelp" value={this.state.whomToHelp} onChange={this.handleChange}>
+                  <FormControlLabel classes={{ label: 'chooseThings-select-item' }} value="dzieciom" control={<Radio />} label="dzieciom" />
+                  <FormControlLabel classes={{ label: 'chooseThings-select-item' }} value="samotnym matkom" control={<Radio />} label="samotnym matkom" />
+                  <FormControlLabel classes={{ label: 'chooseThings-select-item' }} value="bezdomnym" control={<Radio />} label="bezdomnym" />
+                  <FormControlLabel classes={{ label: 'chooseThings-select-item' }} value="niepełnosprawnym" control={<Radio />} label="niepełnosprawnym" />
+                  <FormControlLabel classes={{ label: 'chooseThings-select-item' }} value="osobom starszym" control={<Radio />} label="osobom starszym" />
+               </RadioGroup>
+               <div className='subpage2-description'>Wpisz nazwę konkretnej organizacji (opcjonalnie)</div>
                <form noValidate autoComplete="off">
-                  <TextField value={this.state.organization} name='organization' onChange={this.handleChange} label="Konkretna organizacja (opcjonalnie)" />
+                  <TextField variant="outlined" value={this.state.organization} name='organization' onChange={this.handleChange} />
                </form>
             </>
          case 3:
             return <>
-               <div>Podaj adres oraz termin odbioru rzecz przez kuriera</div>
-               <div>Adres odbioru:</div>
-               <TextField value={this.state.street} onChange={this.handleChange} name='street' label="Ulica" />
-               <TextField value={this.state.city} onChange={this.handleChange} name='city' label="Miasto" />
-               <TextField value={this.state.zipCode} onChange={this.handleChange} name='zipCode' label="Kod pocztowy" />
-               <TextField value={this.state.phoneNr} onChange={this.handleChange} name='phoneNr' label="Numer telefonu" />
-
-               <div>Termin odbioru:</div>
-               <TextField value={this.state.date} onChange={this.handleChange} name='date' label="Data" />
-               <TextField value={this.state.hour} onChange={this.handleChange} name='hour' label="Godzina" />
-               <TextField value={this.state.comments} onChange={this.handleChange} name='comments' label="Uwagi dla kuriera" />
+               <div className='bagAmount-header'>Podaj adres oraz termin odbioru rzeczy przez kuriera</div>
+               <div className='subpage3-inputs'>
+                  <div className='subpage3-inputs-column'>
+                     <div className='subpage2-description'>Adres odbioru:</div>
+                     <TextField variant="outlined" value={this.state.street} onChange={this.handleChange} name='street' label="Ulica" />
+                     <TextField variant="outlined" value={this.state.city} onChange={this.handleChange} name='city' label="Miasto" />
+                     <TextField variant="outlined" value={this.state.zipCode} onChange={this.handleChange} name='zipCode' label="Kod pocztowy" />
+                     <TextField variant="outlined" value={this.state.phoneNr} onChange={this.handleChange} name='phoneNr' label="Numer telefonu" />
+                  </div>
+                  <div className='subpage3-inputs-column'>
+                     <div className='subpage2-description'>Termin odbioru:</div>
+                     <TextField variant="outlined" value={this.state.date} onChange={this.handleChange} name='date' label="Data" />
+                     <TextField variant="outlined" value={this.state.hour} onChange={this.handleChange} name='hour' label="Godzina" />
+                     <TextField variant="outlined" rows="3" multiline value={this.state.comments} onChange={this.handleChange} name='comments' label="Uwagi dla kuriera" />
+                  </div>
+               </div>
 
             </>
          case 4:
             return <>
-               <div>Podsumowanie Twojej darowizny</div>
-               <div>Oddajesz:</div>
+               <div className='bagAmount-header'>Podsumowanie Twojej darowizny</div>
+               <div className='subpage2-description'>Oddajesz:</div>
                <div>
                   <div></div>
                   <div>{this.state.bagAmount} worki, {this.state.chooseThings}, {this.state.whomToHelp}</div>
@@ -123,36 +127,46 @@ export default class GiveStuffForm extends Component {
                   <div></div>
                   <div>dla lokalizacji: {this.state.location}</div>
                </div>
-               <div>
-                  <div>
-                     <div>Adres odbioru:</div>
-                     <div>
-                        <div>
-                           <div>Ulica</div>
-                           <div>Miasto</div>
-                           <div>Kod<br />pocztowy</div>
-                           <div>Numer<br />telefonu</div>
-                        </div>
-                        <div>
-                           <div>{this.state.street}</div>
-                           <div>{this.state.city}</div>
-                           <div>{this.state.zipCode}</div>
-                           <div>{this.state.phoneNr}</div>
+               <div className='subpage3-inputs'>
+                  <div className='subpage3-inputs-column'>
+                     <div className='subpage2-description'>Adres odbioru:</div>
+                     <div className='subpage3-inputs'>
+                        <div className='subpage4-column'>
+                           <div>
+                              <div>Ulica</div>
+                              <div>{this.state.street}</div>
+                           </div>
+                           <div>
+                              <div>Miasto</div>
+                              <div>{this.state.city}</div>
+                           </div>
+                           <div>
+                              <div>Kod<br />pocztowy</div>
+                              <div>{this.state.zipCode}</div>
+                           </div>
+                           <div>
+                              <div>Numer<br />telefonu</div>
+                              <div>{this.state.phoneNr}</div>
+                           </div>
                         </div>
                      </div>
                   </div>
-                  <div>
-                     <div>Termin odbioru:</div>
-                     <div>
-                        <div>
-                           <div>Data</div>
-                           <div>Godzina</div>
-                           <div>Uwagi<br />dla kuriera</div>
-                        </div>
-                        <div>
-                           <div>{this.state.date}</div>
-                           <div>{this.state.hour}</div>
-                           <div>{this.state.comments}</div>
+                  <div className='subpage3-inputs-column'>
+                     <div className='subpage2-description'>Termin odbioru:</div>
+                     <div className='subpage3-inputs'>
+                        <div className='subpage4-column'>
+                           <div>
+                              <div>Data</div>
+                              <div>{this.state.date}</div>
+                           </div>
+                           <div>
+                              <div>Godzina</div>
+                              <div>{this.state.hour}</div>
+                           </div>
+                           <div>
+                              <div>Uwagi<br />dla kuriera</div>
+                              <div>{this.state.comments}</div>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -160,9 +174,9 @@ export default class GiveStuffForm extends Component {
 
             </>
          case 5:
-            return <>
+            return <div className='subpage6'>
                <SectionTitle>Dziękujemy za przesłanie formularza<br />Na maila prześlemy wszelkie informacje o odbiorze</SectionTitle>
-            </>
+            </div>
          default:
             return ''
       }
@@ -172,7 +186,7 @@ export default class GiveStuffForm extends Component {
    shouldRenderPrevButton = () => ![0, 5].includes(this.state.pageNr)
    shouldRenderConfirmButton = () => this.state.pageNr === 4
    shouldRenderStep = () => this.state.pageNr < 4
-
+   shouldRenderWarning = () => this.state.pageNr < 4
    render() {
       const theme = createMuiTheme({
          palette: {
@@ -184,14 +198,14 @@ export default class GiveStuffForm extends Component {
 
       return (
          <ThemeProvider theme={theme}>
-            <div>
+            <div>{this.shouldRenderWarning() ?
                <div className='warningBox'>
                   <div className='warningBox-header'>Ważne!</div>
                   <div className='warningBox-description'>{this.warningDescription()}</div>
-               </div>
+               </div> : null}
                <div className='GiveStuffForm-banner'>
                   {this.shouldRenderStep() ? <div className='GiveStuffForm-step'>Krok {this.state.pageNr + 1}/4</div> : null}
-                  <div>{this.pageInput()}</div>
+                  <div className='GiveStuffForm-subpage'>{this.pageInput()}</div>
                   <div className='GiveStuffForm-buttons'>
                      {this.shouldRenderPrevButton() ? <div className='GiveStuffForm-button' onClick={this.prevPage}>Wstecz</div> : null}
                      {this.shouldRenderNextButton() ? <div className='GiveStuffForm-button' onClick={this.nextPage}>Dalej</div> : null}
